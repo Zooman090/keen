@@ -1,0 +1,21 @@
+.layout-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.tweet-img {
+  max-width: 100%;
+}
+
+.avatar {
+  max-width: 50px;
+  border-radius: 50%;
+}
+
+.mt-25 {
+  margin-top: 25px!important;
+}
+
+.ml-15 {
+  margin-left: 15px !important;
+}
