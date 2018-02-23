@@ -1,5 +1,6 @@
 body {
-  background-color: #edeef0
+  background-color: #edeef0;
+  font-family: 'Lato';
 }
 
 .layout-column {
@@ -35,4 +36,23 @@ body {
   background-color: #fff;
   box-shadow: 0px 1px 7px -2px;
   padding: 20px;
+  margin-top: 20px;
+}
+
+.creator-name {
+  margin-right: 10px;
+}
+
+.creator-name__creator-link {
+  text-decoration: none;
+  color: #000;
+
+  &:hover {
+    color: #1c94e0;
+  }
+}
+
+.date-of-create {
+  color: silver;
+  font-size: 10px;
 }

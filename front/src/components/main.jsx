@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Grid } from 'material-ui';
 
-import Sign from './sign';
+import UserNameForm from './user-name-form';
 import TwittView from './twitt-view';
 
 export default class Main extends Component {
@@ -9,7 +9,6 @@ export default class Main extends Component {
     super(props);
 
     this.state = {
-      userName: '',
       tweets: []
     };
 
@@ -27,15 +26,13 @@ export default class Main extends Component {
   }
 
   render() {
-    return (
-      <Grid container spacing={0}
-        justify={'space-around'}
-        alignItems={'flex-start'}>
-        <Sign saveTweets={this.saveTweets}/>
-        <Grid className="mt-25" item container xs={7} spacing={0}>
-          {this.twittsView}
-        </Grid>
+    return <Grid container spacing={0}
+      justify={'space-around'}
+      alignItems={'flex-start'}>
+      <UserNameForm saveTweets={this.saveTweets}/>
+      <Grid className="mt-25" item container xs={7} spacing={0}>
+        {this.twittsView}
       </Grid>
-    );
+    </Grid>;
   }
 }

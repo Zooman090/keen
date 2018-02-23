@@ -1,21 +1,21 @@
 import React from 'react';
 import { Grid } from 'material-ui';
 
-const TwittView = (props) => {
-  const { created_at: createdAt, text, entities, user } = props,
-    { name = '', profile_image_url: avatarUrl } = user,
-    { media } = entities,
-    getAllPhotos = media => media.map(({ media_url, type }, index) => type === 'photo' ? <img className="tweet-img" key={`${index}-img`} src={media_url}/> : null);
+import { getAllPhotosFromTweet, getMonthAndDay } from '../utils';
 
-  return <Grid className="tweets-container" item container direction={'column'} spacing={0}>
-    <p>{createdAt}</p>
-    <Grid item container>
-      <img className="avatar" src={avatarUrl} />
-      <p>{name}</p>
+const TwittView = ({ created_at: createdAt, text, entities, user }) => {
+  const { name: creatorName, profile_image_url: httpAvatarUrl } = user,
+    { media } = entities;
+
+  return <Grid className="tweets-container mt-25" item container direction={'column'} spacing={0}>
+    <Grid item container alignItems={'center'}>
+      <img className="avatar" src={httpAvatarUrl} />
+      <p className="creator-name"><a className="creator-name__creator-link" href={`https://twitter.com/${creatorName}`} target="_blank">{creatorName}</a></p>
+      <p className="date-of-create">{getMonthAndDay(createdAt)}</p>
     </Grid>
     <p>{text}</p>
     <Grid item>
-      {media ? getAllPhotos(media) : null}
+      {getAllPhotosFromTweet(media)}
     </Grid>
   </Grid>;
 };
