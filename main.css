@@ -28,4 +28,12 @@ body {
 .tweets-container {
   background-color: #fff;
   box-shadow: 0px 1px 7px -2px;
-  padding: 20px; }
+  padding: 20px;
+  margin-top: 20px; }
+
+.creator-name {
+  margin-right: 10px; }
+
+.date-of-create {
+  color: silver;
+  font-size: 10px; }
