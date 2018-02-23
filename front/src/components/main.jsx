@@ -29,9 +29,10 @@ export default class Main extends Component {
   render() {
     return (
       <Grid container spacing={0}
-        justify={'space-between'}>
+        justify={'space-around'}
+        alignItems={'flex-start'}>
         <Sign saveTweets={this.saveTweets}/>
-        <Grid item container xs={8} spacing={0}>
+        <Grid className="mt-25" item container xs={7} spacing={0}>
           {this.twittsView}
         </Grid>
       </Grid>

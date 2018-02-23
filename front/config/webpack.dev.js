@@ -3,6 +3,7 @@ const common = require('./webpack.common.js');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const path = require('path');
+const webpack = require('webpack');
 
 const paths = {
   DIST: path.resolve(__dirname, '../dist'),

@@ -38,7 +38,7 @@ export default class Main extends Component {
     return (
       <Grid item container
         direction={'column'} xs={3}
-        className="mt-25 ml-15">
+        className="sign mt-25 ml-15">
         <form className="layout-column" onSubmit={this.getTimeline}>
           <TextField
             required={true}

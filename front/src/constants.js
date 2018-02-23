@@ -1,1 +1,1 @@
-export const serverUrl = process.env.NODE_ENV === 'production' ? '' : 'http://localhost:8008';
+export const serverUrl = 'https://tranquil-eyrie-14375.herokuapp.com';

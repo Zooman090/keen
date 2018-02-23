@@ -15,7 +15,7 @@ const express = require('express'),
   });
 
 router.get('/timeline', (req, res) => {
-  const url = 'statuses/home_timeline',
+  const url = 'statuses/user_timeline',
     { userName } = req.query,
     params = {
       screen_name: userName

@@ -7,7 +7,7 @@ const TwittView = (props) => {
     { media } = entities,
     getAllPhotos = media => media.map(({ media_url, type }, index) => type === 'photo' ? <img className="tweet-img" key={`${index}-img`} src={media_url}/> : null);
 
-  return <Grid item container direction={'column'} spacing={0}>
+  return <Grid className="tweets-container" item container direction={'column'} spacing={0}>
     <p>{createdAt}</p>
     <Grid item container>
       <img className="avatar" src={avatarUrl} />
